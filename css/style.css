@@ -203,9 +203,14 @@ span {
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
+  text-align: center;
   padding-bottom: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  height: 400px;
+  margin-top: 65px;
+  border:1px solid #999;
 }
 
 @media only screen and (min-width: 750px) {
