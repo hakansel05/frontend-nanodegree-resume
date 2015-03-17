@@ -6,10 +6,10 @@ var bio = {
     "email" : "hakansel05@gmail.com",
     "github" : "hakansel05",
     "twitter" : "@hakansel",
-    "location" : "Ankara"
+    "location" : "Ankara, TR"
     },
   "pic_url" : "images/hha.png",
-  "message" : "Hello World Brew!", 
+  "message" : "Hello World; I'm Just Code Brew!", 
   "skills" : [
     "Embedded System", "Software Development", "Linux"
   ]
@@ -35,9 +35,9 @@ bio.display = (function(){
   if(bio.hasOwnProperty("skills")){
     if (bio.skills.length !== false) {
       $("#header").append(HTMLskillsStart);
-      $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
-      $("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
-      $("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
+      $("#header").append(HTMLskills.replace("%data%", bio.skills[0]));
+      $("#header").append(HTMLskills.replace("%data%", bio.skills[1]));
+      $("#header").append(HTMLskills.replace("%data%", bio.skills[2]));
     }
   }
 })();
@@ -49,21 +49,21 @@ var work = {
       "curr_pos" : "Software Developer",
       "employer" : "Tokmak Technology",
       "year" : "May, 2014 - present",
-      "city" : "Ankara, TR",
+      "location" : "Ankara, TR",
       "description" : "We are all code brew about high technology."
     },
     {
       "curr_pos" : "Embedded Software Developer",
       "employer" : "Onur Inc.",
       "year" : "June, 2012 - Nov, 2013",
-      "city" : "Ankara, TR",
+      "location" : "Ankara, TR",
       "description" : "- Embedded Software Engineer(exactly Embedded Linux Engineer) on Air Defense Radio Network Project(ADRN). ADRN is a next generation VoIP solution to provide country-wide radio&coverage for air traffic&intercept controllers."
     },
     {
       "curr_pos" : "Software Developer",
       "employer" : "Lider Technology",
       "year" : "Feb, 2012 - June, 2012",
-      "city" : "Ankara, TR",
+      "location" : "Ankara, TR",
       "description" : "Avionics, BeechCraft C90GTi CDU(Rockwell Collins FMS3000) software programmer, flight simulation."
     }
   ]
@@ -78,7 +78,7 @@ work.display = (function(){
           $(".work-entry:last").append(HTMLworkEmployer.replace("%data%", work["jobs"][job]["employer"]));
           $(".work-entry:last").append(HTMLworkTitle.replace("%data%", work["jobs"][job]["curr_pos"]));
           $(".work-entry:last").append(HTMLworkDates.replace("%data%", work["jobs"][job]["year"]));
-          $(".work-entry:last").append(HTMLworkLocation.replace("%data%", work["jobs"][job]["city"]));
+          $(".work-entry:last").append(HTMLworkLocation.replace("%data%", work["jobs"][job]["location"]));
           $(".work-entry:last").append(HTMLworkDescription.replace("%data%", work["jobs"][job]["description"]));      
         }
       }
@@ -92,14 +92,14 @@ var education = {
         "university" : "Eskishir Osmangazi University",
         "degree" : "2.55",
         "year" : "2006 - 2012",
-        "city" : "Eskisehir, TR",
+        "location" : "Eskisehir, TR",
         "major" : "Computer Engineering"
       },
       {
         "university" : "Eskishir Osmangazi University",
         "degree" : "2.54",
         "year" : "2006 - 2012",
-        "city" : "Eskisehir, TR",
+        "location" : "Eskisehir, TR",
         "major" : "Electrical-Electronics Engineering"
       }
     ]
@@ -114,7 +114,7 @@ education.display = (function() {
         $(".education-entry:last").append(HTMLschoolName.replace("%data%", education.schools[school].university));
         $(".education-entry:last").append(HTMLschoolDegree.replace("%data%", education.schools[school].degree));
         $(".education-entry:last").append(HTMLschoolDates.replace("%data%", education.schools[school].year));
-        $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[school].city));
+        $(".education-entry:last").append(HTMLschoolLocation.replace("%data%", education.schools[school].location));
         $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[school].major));      
       }
     }
